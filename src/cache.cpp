@@ -46,7 +46,7 @@ int VkCache::init_cache_data(const std::vector<unsigned char>& cache_data)
     VkPipelineCacheCreateInfo pipelineCacheCreateInfo;
     pipelineCacheCreateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO;
     pipelineCacheCreateInfo.pNext = 0;
-    pipelineCacheCreateInfo.flags = 0;// TODO use VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT_EXT for unlocked version
+    pipelineCacheCreateInfo.flags = 0; // TODO use VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT_EXT for unlocked version
     pipelineCacheCreateInfo.initialDataSize = cache_data.size();
     pipelineCacheCreateInfo.pInitialData = cache_data.data();
 
